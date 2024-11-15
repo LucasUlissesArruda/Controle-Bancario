@@ -53,6 +53,9 @@ void menucontasbancarias();
 // Exibe o menu de Movimentações Bancarias
 void menumovibancarias();
 
+// Cadastra conta do final 
+void CadastrarContaFinal(TipoLista *L);
+
 // Remover Funcionarios Inicio
 void RemoverFuncionarioFinal(TipoLista *L);
 

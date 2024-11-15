@@ -41,6 +41,10 @@ void menucontasbancarias() {
     printf("Escolha uma opcao:");
     scanf("%d", &opc);
 
+     if (opc == 1) {
+        CadastrarContaFinal(&lista);
+    }
+
     if (opc == 4) {
         RemoverFuncionarioFinal(&lista);
     }
