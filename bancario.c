@@ -10,5 +10,4 @@ int main() {
     desenhar_tela();
     telaprincipal();
     getch();
-
 }
