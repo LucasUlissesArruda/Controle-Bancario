@@ -11,6 +11,30 @@ Data: 15/11/2024
 #include <windows.h>
 #include <stdlib.h>
 
+// Definições globais de tipos
+typedef struct {
+    int codigo;
+    char Banco[50];
+    int agencia;
+    int numConta;
+    char tipo_conta[50];
+    float saldo;
+    float Limite;
+    int statusConta;
+} reg_ContaBanco;
+
+typedef struct TipoItem *tipoApontador;
+
+typedef struct TipoItem {
+    reg_ContaBanco conteudo;
+    tipoApontador proximo;
+} TipoItem;
+
+typedef struct {
+    tipoApontador Primeiro;
+    tipoApontador Ultimo;
+} TipoLista;
+
 // Desenha a tela padrao
 void desenhar_tela();
 
@@ -29,7 +53,7 @@ void menucontasbancarias();
 // Exibe o menu de Movimentações Bancarias
 void menumovibancarias();
 
-//Tipos de Apontadores
-void apontadores();
+// Remover Funcionarios Inicio
+void RemoverFuncionarioFinal(TipoLista *L);
 
 #endif
