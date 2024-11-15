@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -39,5 +40,4 @@ void menucontasbancarias(){
     if(opc == 9){
         telaprincipal();
     }
-
 }
