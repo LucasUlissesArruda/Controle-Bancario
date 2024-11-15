@@ -29,4 +29,7 @@ void menucontasbancarias();
 // Exibe o menu de Movimentações Bancarias
 void menumovibancarias();
 
+//Tipos de Apontadores
+void apontadores();
+
 #endif
