@@ -35,8 +35,10 @@ void desenhar_tela() {
     printf("UNICV");
     gotoxy(60, 2);
     printf("Estrutura de dados");
-    gotoxy(3, 3);
-    printf("Calculo de Areas em C");
-    gotoxy(66, 3);
-    printf("Lucas");
+    gotoxy(25, 2);
+    printf("Sistema de Controle Bancario");
+    gotoxy(30,3);
+    printf("Menu Principal");
+    gotoxy(60, 3);
+    printf("Lucas e Leonardo");
 }
