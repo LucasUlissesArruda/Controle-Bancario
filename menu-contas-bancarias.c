@@ -46,7 +46,10 @@ void menucontasbancarias() {
     }
 
     if (opc == 4) {
-        RemoverFuncionarioFinal(&lista);
+        RemoverContaFinal(&lista);
+    }
+    if (opc == 5) {
+        RemoverContaInicio(&lista);
     }
 
     if (opc == 9) {

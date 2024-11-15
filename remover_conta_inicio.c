@@ -8,8 +8,8 @@ Data: 15/11/2024
 #include "Funcoes.h"
 #include <conio.h>
 
-void RemoverContaFinal(TipoLista *L) {
-    tipoApontador p, temp;
+void RemoverContaInicio(TipoLista *L) {
+    tipoApontador temp;
     int confirmacao;
 
     if (L->Primeiro == NULL) {
@@ -19,10 +19,10 @@ void RemoverContaFinal(TipoLista *L) {
         return;
     }
 
-    // Exibir informações da última conta
-    temp = L->Ultimo;
+    // Exibir informações da primeira conta
+    temp = L->Primeiro;
     gotoxy(7, 5);
-    printf("Informações da última conta:\n");
+    printf("Informações da primeira conta:\n");
     gotoxy(7, 7);
     printf("Código: %d", temp->conteudo.codigo);
     gotoxy(7, 8);
@@ -44,7 +44,7 @@ void RemoverContaFinal(TipoLista *L) {
     printf("Deseja realmente remover esta conta? (1 - Sim / 2 - Não): ");
     scanf("%d", &confirmacao);
 
-    if (confirmacao ==  2) {
+    if (confirmacao != 1) {
         gotoxy(7, 18);
         printf("Operação cancelada.\n");
         getch();
@@ -52,20 +52,15 @@ void RemoverContaFinal(TipoLista *L) {
     }
 
     // Remoção da conta
-    if (L->Primeiro == L->Ultimo) {  // Apenas um elemento na lista
-        free(L->Primeiro);
+    temp = L->Primeiro;
+    if (L->Primeiro == L->Ultimo) { 
         L->Primeiro = NULL;
         L->Ultimo = NULL;
-    } else {  // Mais de um elemento
-        p = L->Primeiro;
-        while (p->proximo != L->Ultimo) {
-            p = p->proximo;
-        }
-        temp = L->Ultimo;
-        L->Ultimo = p;
-        L->Ultimo->proximo = NULL;
-        free(temp);
+    } else {  
+        L->Primeiro = L->Primeiro->proximo;
     }
+
+    free(temp);
 
     gotoxy(7, 18);
     printf("Conta removida com sucesso!\n");
