@@ -70,4 +70,5 @@ void RemoverContaFinal(TipoLista *L) {
     gotoxy(7, 18);
     printf("Conta removida com sucesso!\n");
     getch();
+    menucontasbancarias();
 }

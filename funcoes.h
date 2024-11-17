@@ -59,4 +59,7 @@ void CadastrarContaFinal(TipoLista *L);
 // Remover Funcionarios Inicio
 void RemoverFuncionarioFinal(TipoLista *L);
 
+// Consultar Contas
+void consultarConta();
+
 #endif

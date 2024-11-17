@@ -31,6 +31,6 @@ void telaprincipal() {
         menumovibancarias();
     }
     else if(opc == 3){
-        return 0;
+        exit;
     }
 }

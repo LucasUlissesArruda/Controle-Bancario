@@ -51,6 +51,9 @@ void menucontasbancarias() {
     if (opc == 5) {
         RemoverContaInicio(&lista);
     }
+    if (opc == 8){
+        consultarConta(&lista);
+    }
 
     if (opc == 9) {
         telaprincipal();

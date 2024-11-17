@@ -65,4 +65,6 @@ void CadastrarContaFinal(TipoLista *L) {
     }
 
     printf("Conta cadastrada no final com sucesso!\n");
+
+    menucontasbancarias();
 }
