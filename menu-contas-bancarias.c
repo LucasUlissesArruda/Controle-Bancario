@@ -50,21 +50,25 @@ void menucontasbancarias() {
     printf("Escolha uma opcao:");
     scanf("%d", &opc);
 
-     if (opc == 1) {
+        if (opc == 1) {
         CadastrarContaFinal(&lista);
     }
+    
+        if (opc == 2) {
+        CadastrarContaInicio(&lista);
+    }
 
-    if (opc == 4) {
+        if (opc == 4) {
         RemoverContaFinal(&lista);
     }
-    if (opc == 5) {
+        if (opc == 5) {
         RemoverContaInicio(&lista);
     }
-    if (opc == 8){
+        if (opc == 8){
         consultarConta(&lista);
     }
 
-    if (opc == 9) {
+        if (opc == 9) {
         telaprincipal();
     }
 }
