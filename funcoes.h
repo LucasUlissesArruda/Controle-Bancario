@@ -10,6 +10,7 @@ Data: 15/11/2024
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Definições globais de tipos
 typedef struct {
@@ -23,17 +24,37 @@ typedef struct {
     int statusConta;
 } reg_ContaBanco;
 
+// Definição do tipo para o ponteiro de estrutura de lista encadeada
 typedef struct TipoItem *tipoApontador;
+typedef struct TipoItem_conta *tipoApontador_conta;
 
+// Estrutura do nó da lista encadeada
 typedef struct TipoItem {
     reg_ContaBanco conteudo;
     tipoApontador proximo;
 } TipoItem;
 
+// Estrutura do nó da lista encadeada de contas
+typedef struct TipoItem_conta {
+    reg_ContaBanco conteudo;
+    tipoApontador_conta proximo;
+} TipoItem_conta;
+
+// Estrutura da lista de contas
 typedef struct {
     tipoApontador Primeiro;
     tipoApontador Ultimo;
 } TipoLista;
+
+// Estrutura da lista de contas bancárias com ponteiro tipoApontador_conta
+typedef struct {
+    tipoApontador_conta Primeiro;
+    tipoApontador_conta Ultimo;
+} TipoLista_conta;
+
+// Compartilhar a lista global entre os arquivos
+extern TipoLista lista;
+extern TipoLista_conta lista_contas;
 
 // Desenha a tela padrao
 void desenhar_tela();
@@ -67,5 +88,11 @@ void MenuConsultarContas();
 
 // Gravar Contas
 void gravar_contas(TipoLista *L);
+
+// Recuperar as Contas
+void restaurar_contas(TipoLista *L);
+
+// Listar contas em Geral
+void consultaGeralContas(TipoLista *L);
 
 #endif

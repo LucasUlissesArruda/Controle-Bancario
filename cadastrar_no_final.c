@@ -1,12 +1,10 @@
-#include "Funcoes.h"
-#include <conio.h>
-
+#include "funcoes.h"
 void CadastrarContaFinal(TipoLista *L) {
     system("cls");
     desenhar_tela();
    
     reg_ContaBanco conta;
-    tipoApontador p;
+    tipoApontador_conta p;
     
     gotoxy(7,7);
     printf("Codigo: ");
@@ -64,7 +62,11 @@ void CadastrarContaFinal(TipoLista *L) {
         L->Ultimo = p;
     }
 
+    gotoxy(7, 17);
     printf("Conta cadastrada no final com sucesso!\n");
+    getch(); // Pausa para o usuário ver a mensagem
+
+    gravar_contas(L);
 
     menucontasbancarias();
 }

@@ -4,7 +4,7 @@
 #include "Funcoes.h"
 
 void gravar_contas(TipoLista *L){
-    tipoApontador p;
+    tipoApontador_conta p;
     reg_ContaBanco reg_ContaBanco;
     FILE *prt;
     char *filename = "Contas.dat";
@@ -28,10 +28,6 @@ void gravar_contas(TipoLista *L){
                 fwrite(&reg_ContaBanco,sizeof(reg_ContaBanco),1,prt);
                 p = p->proximo;
             }
-            fclose(prt);
-            gotoxy(07,18);
-            printf("Contas Gravadas Com Sucesso");
-            getch();
         }
         
     }

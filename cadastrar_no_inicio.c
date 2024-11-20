@@ -1,5 +1,4 @@
-#include "Funcoes.h"
-#include <conio.h>
+#include "funcoes.h"
 
 void CadastrarContaInicio(TipoLista *L) {
     system("cls");
@@ -64,9 +63,11 @@ void CadastrarContaInicio(TipoLista *L) {
         L->Primeiro = p;         // Novo nó se torna o primeiro
     }
 
-     gravar_contas;
-
+    gotoxy(7, 17);
     printf("Conta cadastrada no início com sucesso!\n");
+    getch(); // Pausa para o usuário ver a mensagem
+
+    gravar_contas(L);
 
     menucontasbancarias();
 }

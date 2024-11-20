@@ -36,7 +36,7 @@ void MenuConsultarContas() {
     scanf("%d", &opc);
 
         if (opc == 1) {
-        
+        consultaGeralContas(&lista);
     }
     
         if (opc == 2) {
