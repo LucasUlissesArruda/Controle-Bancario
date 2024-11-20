@@ -62,7 +62,7 @@ void menucontasbancarias() {
         RemoverContaInicio(&lista);
     }
         if (opc == 8){
-        consultarConta(&lista);
+        MenuConsultarContas(&lista);
     }
 
         if (opc == 9) {

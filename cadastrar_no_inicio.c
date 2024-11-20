@@ -64,6 +64,8 @@ void CadastrarContaInicio(TipoLista *L) {
         L->Primeiro = p;         // Novo nó se torna o primeiro
     }
 
+     gravar_contas;
+
     printf("Conta cadastrada no início com sucesso!\n");
 
     menucontasbancarias();
