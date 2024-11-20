@@ -40,7 +40,7 @@ void MenuConsultarContas() {
     }
     
         if (opc == 2) {
-        consultarConta(&lista);
+        consultarContaCodigo(&lista);
     }
 
         if (opc == 3) {

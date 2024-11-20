@@ -27,10 +27,10 @@ void telaprincipal() {
     if (opc == 1){
         menucontasbancarias();
     }
-    else if(opc == 2){
+    if(opc == 2){
         menumovibancarias();
     }
-    else if(opc == 3){
-        exit;
+    if(opc == 3){
+        exit(1);
     }
 }

@@ -2,7 +2,7 @@
 #include "Funcoes.h"
 
 // Função para consultar contas bancárias pelo número
-void consultarConta(TipoLista *L) {
+void consultarContaCodigo(TipoLista *L) {
     system("cls");
     desenhar_tela();
     int opc;
@@ -59,7 +59,7 @@ void consultarConta(TipoLista *L) {
         printf("Deseja fazer uma nova consulta? 1-Sim 2-Nao: ");
         scanf("%d", &opc);
         if (opc == 1) {
-            consultarConta(L); // Refaz a consulta com a mesma lista
+            consultarContaCodigo(L); // Refaz a consulta com a mesma lista
         } else {
             MenuConsultarContas(); // Volta ao menu
         }

@@ -60,7 +60,7 @@ void CadastrarContaFinal(TipoLista *L);
 void RemoverFuncionarioFinal(TipoLista *L);
 
 // Consultar Contas Por Codigo
-void consultarConta();
+void consultarContaCodigo();
 
 // Menu de Consultar Contas
 void MenuConsultarContas();
