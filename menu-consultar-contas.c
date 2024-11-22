@@ -48,7 +48,8 @@ void MenuConsultarContas() {
     }
         if (opc == 4) {
         RemoverContaInicio(&lista);
-    }if (opc == 5) {
+    }
+        if (opc == 5) {
         menucontasbancarias();
     }
 }
