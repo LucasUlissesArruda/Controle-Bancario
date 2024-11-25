@@ -138,7 +138,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
     // Exibir novo saldo
     gotoxy(7, 19);
     printf("5-Novo Saldo...........: %.2f", conta.saldo);
-    getch(); // Esperar o usuário ver o novo saldo
+    getch();
 
     // Atualiza a conta no banco de dados
     p->conteudo = conta;
