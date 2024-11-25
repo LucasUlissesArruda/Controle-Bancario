@@ -1,20 +1,21 @@
 #include "funcoes.h"
-
 void restaurar_contas(TipoLista *L) {
     reg_ContaBanco reg_ContaBanco;
     FILE *prt;
     char *filename = "Contas.dat";
-    char *modo_leitura = "rb";
+    char *modo_leitura = "rb";  // Modo de leitura binária
     prt = fopen(filename, modo_leitura);  // Abre o arquivo em modo leitura binária
     tipoApontador p;
-    
+
     L->Primeiro = NULL;
     L->Ultimo = NULL;
-    desenhar_tela();
+
+    desenhar_tela();  // Sua função de exibição da tela
 
     if (prt == NULL) {
-        gotoxy(07,23);
-        printf("O Arquivo ainda nao foi criado. Cadastre as contas Bancarias");
+        gotoxy(07, 23);
+        printf("O Arquivo ainda nao foi criado. Cadastre as contas Bancarias\n");
+        return;
     } else {
         // Lê os dados do arquivo e insere na lista
         while (fread(&reg_ContaBanco, sizeof(reg_ContaBanco), 1, prt) == 1) {
@@ -42,9 +43,9 @@ void restaurar_contas(TipoLista *L) {
             }
         }
 
-        gotoxy(07,23);
-        printf("Contas Bancarias Restauradas Com Sucesso");
+        gotoxy(07, 23);
+        printf("Contas Bancarias Restauradas Com Sucesso\n");
 
-        fclose(prt);
+        fclose(prt);  // Fecha o arquivo após ler os dados
     }
 }

@@ -80,8 +80,17 @@ void CadastrarContaFinal(TipoLista *L);
 // Remover Funcionarios Inicio
 void RemoverFuncionarioFinal(TipoLista *L);
 
+// Cadastrar Na Posição
+void CadastrarContaPosicao(TipoLista *L);
+
 // Consultar Contas Por Codigo
 void consultarContaCodigo();
+
+// Consultar por nome
+void ConsultarOrdemAlfabeticaContas(TipoLista *L);
+
+// Consultar por Ordem de Codigo
+void ConsultarOrdemCodigoContas(TipoLista *L);
 
 // Menu de Consultar Contas
 void MenuConsultarContas();
@@ -94,5 +103,14 @@ void restaurar_contas(TipoLista *L);
 
 // Listar contas em Geral
 void consultaGeralContas(TipoLista *L);
+
+// Função para realizar movimentações de débito e crédito
+void movimentacaoDebitoCredito(TipoLista *L);
+
+// Menu Movimentações Bancarias
+void desenhar_movimentacao();
+
+// Movimentação de Debito e Credito
+void movimentacaoDebitoCredito(TipoLista *L);
 
 #endif

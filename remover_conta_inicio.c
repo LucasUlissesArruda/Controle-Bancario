@@ -9,6 +9,8 @@ Data: 15/11/2024
 #include <conio.h>
 
 void RemoverContaInicio(TipoLista *L) {
+    system("cls");
+    desenhar_tela();
     tipoApontador temp;
     int confirmacao;
 
@@ -16,6 +18,7 @@ void RemoverContaInicio(TipoLista *L) {
         gotoxy(7, 23);
         printf("Nenhuma Conta cadastrada!\n");
         getch();
+        menucontasbancarias();
         return;
     }
 
@@ -61,8 +64,11 @@ void RemoverContaInicio(TipoLista *L) {
     }
 
     free(temp);
+    gravar_contas(L);
 
     gotoxy(7, 18);
     printf("Conta removida com sucesso!\n");
+    gravar_contas(L);
     getch();
+    menucontasbancarias();
 }

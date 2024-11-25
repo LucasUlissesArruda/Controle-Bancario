@@ -8,8 +8,6 @@ extern TipoLista lista;
 
 void menucontasbancarias() {
     int opc = 0;
-
-    while (opc != 9) {
         system("cls");
         desenhar_tela();
 
@@ -48,26 +46,23 @@ void menucontasbancarias() {
 
         if (opc == 1) {
             CadastrarContaFinal(&lista);
-        } else if (opc == 2) {
+        }  if (opc == 2) {
             CadastrarContaInicio(&lista);
-        } else if (opc == 3) {
+        }  if (opc == 3) {
             CadastrarContaPosicao(&lista);
-        } else if (opc == 4) {
+        }  if (opc == 4) {
             RemoverContaFinal(&lista);
-        } else if (opc == 5) {
+        }  if (opc == 5) {
             RemoverContaInicio(&lista);
-        } else if (opc == 6) {
+        }  if (opc == 6) {
             RemoverContaPosicao(&lista);
-        } else if (opc == 7) {
-            AlterarConta(&lista); // Certifique-se de implementar esta função
-        } else if (opc == 8) {
+        }  if (opc == 7) {
+            AlterarConta(&lista);
+        }  if (opc == 8) {
             MenuConsultarContas(&lista);
-        } else if (opc == 9) {
+        }  if (opc == 9) {
             telaprincipal();
-        } else {
-            gotoxy(7, 12);
-            printf("Opcao invalida! Tente novamente.");
-            getch();
         }
+    
     }
-}
+
