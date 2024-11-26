@@ -36,7 +36,10 @@ typedef struct {
 } TipoLista;
 
 // Estrutura da lista de contas bancárias com ponteiro tipoApontador_conta
-
+typedef struct {
+    tipoApontador Primeiro;
+    tipoApontador Ultimo;
+} TipoLista_conta;
 
 typedef struct {
     char data[11];

@@ -1,7 +1,7 @@
 #include "funcoes.h"
 
 void gravar_contas(TipoLista *L) {
-    tipoApontador_conta p;
+    tipoApontador p;
     reg_ContaBanco reg_ContaBanco;
     FILE *prt;
     char *filename = "Contas.dat";
