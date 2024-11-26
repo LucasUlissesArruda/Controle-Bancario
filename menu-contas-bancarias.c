@@ -59,7 +59,7 @@ void menucontasbancarias() {
         } else if (opc == 6) {
             RemoverContaPosicao(&lista);
         } else if (opc == 7) {
-            AlterarConta(&lista); // Certifique-se de implementar esta função
+            AlterarConta(&lista); 
         } else if (opc == 8) {
             MenuConsultarContas(&lista);
         } else if (opc == 9) {
