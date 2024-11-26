@@ -14,6 +14,9 @@ void CadastrarContaFinal(TipoLista *L) {
     printf("Codigo: ");
     scanf("%d", &conta.codigo);
 
+    gotoxy(7, 23);
+    printf("                                                               ");
+
     if(conta.codigo == 0){
         menucontasbancarias();
         return;
