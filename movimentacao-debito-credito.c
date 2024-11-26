@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <windows.h>
 #include "funcoes.h"
-
-// Função para exibir o menu e realizar a movimentação
 void movimentacaoDebitoCredito(TipoLista *L) {
     int opcao;
     int contaSelecionada;
@@ -32,6 +26,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
         gotoxy(7, 9);
         printf("Conta nao encontrada.\n");
         getch();
+        menumovibancarias();
         return;
     }
 
@@ -116,13 +111,13 @@ void movimentacaoDebitoCredito(TipoLista *L) {
         }
     } else if (opcao == 2) {
         // Crédito
-        conta.saldo -= valorMovimentacao;  // Adiciona o valor à conta de origem
+        conta.saldo += valorMovimentacao;  // Adiciona o valor à conta de origem
         
         // Encontra a conta do favorecido
         tipoApontador pFavorecido = L->Primeiro;
         while (pFavorecido != NULL) {
             if (pFavorecido->conteudo.codigo == codigoFavorecido) {
-                pFavorecido->conteudo.saldo += valorMovimentacao;  // Subtrai o valor da conta do favorecido
+                pFavorecido->conteudo.saldo += valorMovimentacao;  // Adiciona o valor à conta do favorecido
                 break;
             }
             pFavorecido = pFavorecido->proximo;
