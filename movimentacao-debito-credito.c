@@ -54,6 +54,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
         gotoxy(7, 23);
         printf("Saldo e limite insuficientes para transacao.\n");
         getch();
+        menumovibancarias();
         return;
     }
 
@@ -85,6 +86,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
         gotoxy(7, 23);
         printf("Valor de movimentacao invalido.\n");
         getch();
+        menumovibancarias();
         return;
     }
 
@@ -101,6 +103,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
                 gotoxy(7, 23);
                 printf("Limite insuficiente.\n");
                 getch();
+                menumovibancarias();
                 return;
             }
         } else {
@@ -110,6 +113,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
             gotoxy(7, 24);
             printf("Saldo atual: %.2f\n", conta.saldo);
             getch();
+            menumovibancarias();
             return;
         }
 
@@ -128,6 +132,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
             conta.saldo += valorMovimentacao;  // Se não encontrado, desfaz o débito
             conta.Limite += valorMovimentacao;
             getch();
+            movimentacaoDebitoCredito(L);
             return;
         }
 
@@ -147,6 +152,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
             gotoxy(7, 23);
             printf("Favorecido nao encontrado.\n");
             getch();
+            menumovibancarias();
             return;
         }
     }

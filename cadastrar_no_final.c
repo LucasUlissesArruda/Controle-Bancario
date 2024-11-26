@@ -7,9 +7,17 @@ void CadastrarContaFinal(TipoLista *L) {
     reg_ContaBanco conta;
     tipoApontador p;
 
+    gotoxy(7,23);
+    printf("Digite 0 Para Cancelar a Operacao");
+
     gotoxy(7,7);
     printf("Codigo: ");
     scanf("%d", &conta.codigo);
+
+    if(conta.codigo == 0){
+        menucontasbancarias();
+        return;
+    }
     
     gotoxy(7,8);
     printf("Nome do banco: ");
@@ -17,7 +25,7 @@ void CadastrarContaFinal(TipoLista *L) {
     fgets(conta.Banco, 50, stdin);
 
     gotoxy(7,9);
-    printf("Digite a agência: ");
+    printf("Digite a agencia: ");
     scanf("%d", &conta.agencia);
 
     gotoxy(7,10);

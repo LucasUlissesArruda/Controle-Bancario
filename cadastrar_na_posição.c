@@ -8,10 +8,24 @@ void CadastrarContaPosicao(TipoLista *L) {
     tipoApontador novo, anterior, atual;
     int posicao, contador = 1;
 
+    gotoxy(7, 23);
+    printf("Digite 0 para cancelar a operacao.\n");
+
+    
+
     // Solicita os dados da nova conta
     gotoxy(7, 7);
     printf("Codigo: ");
     scanf("%d", &conta.codigo);
+
+    gotoxy(7, 23);
+    printf("                                                               ");
+
+    // Verificar se o código é 0 para cancelar
+    if (conta.codigo == 0) {
+        menucontasbancarias();
+        return;
+    }
 
     gotoxy(7, 8);
     printf("Nome do banco: ");
@@ -66,10 +80,16 @@ void CadastrarContaPosicao(TipoLista *L) {
     printf("Digite o status da conta (0 - Inativa, 1 - Ativa): ");
     scanf("%d", &conta.statusConta);
 
-    // Solicita a posição
+    // Solicita a posição para cadastro
     gotoxy(7, 20);
     printf("Digite a posição para cadastrar (iniciando de 1): ");
     scanf("%d", &posicao);
+
+    // Verificar se a posição é 0 para cancelar
+    if (posicao == 0) {
+        menucontasbancarias();
+        return;
+    }
 
     // Cria o novo nó
     novo = (tipoApontador)malloc(sizeof(TipoItem));
@@ -127,8 +147,6 @@ void CadastrarContaPosicao(TipoLista *L) {
             }
         }
 
-        gotoxy(7, 23);
-        printf("                                            ");
         gotoxy(7, 23);
         printf("Conta cadastrada na posição %d.\n", posicao);
     }
