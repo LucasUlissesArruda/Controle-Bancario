@@ -12,7 +12,7 @@ void AlterarConta(TipoLista *L) {
         gotoxy(7, 12);
         printf("Nenhuma conta cadastrada!");
         getch();
-        return;
+        return; 
     }
 
     gotoxy(7, 7);
@@ -52,7 +52,7 @@ void AlterarConta(TipoLista *L) {
             printf("Banco: ");
             fflush(stdin);
             fgets(atual->conteudo.Banco, 50, stdin);
-            atual->conteudo.Banco[strcspn(atual->conteudo.Banco, "\n")] = '\0';
+           
 
             gotoxy(7, 19);
             printf("Agencia: ");
@@ -66,8 +66,7 @@ void AlterarConta(TipoLista *L) {
             printf("Tipo de Conta: ");
             fflush(stdin);
             fgets(atual->conteudo.tipo_conta, 50, stdin);
-            atual->conteudo.tipo_conta[strcspn(atual->conteudo.tipo_conta, "\n")] = '\0';
-
+            
             gotoxy(7, 22);
             printf("Saldo: ");
             scanf("%f", &atual->conteudo.saldo);
@@ -83,6 +82,8 @@ void AlterarConta(TipoLista *L) {
             gotoxy(7, 26);
             printf("Conta alterada com sucesso!");
             getch();
+
+            menucontasbancarias(); 
             return;
         }
         atual = atual->proximo;
@@ -93,4 +94,6 @@ void AlterarConta(TipoLista *L) {
         printf("Conta nao encontrada!");
         getch();
     }
+
+    menucontasbancarias(); 
 }
