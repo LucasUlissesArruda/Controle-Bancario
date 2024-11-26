@@ -44,10 +44,10 @@ void MenuConsultarContas() {
     }
 
         if (opc == 3) {
-        RemoverContaFinal(&lista);
+        ConsultarOrdemCodigoContas(&lista);
     }
         if (opc == 4) {
-        RemoverContaInicio(&lista);
+        ConsultarOrdemAlfabeticaContas(&lista);
     }
         if (opc == 5) {
         menucontasbancarias();

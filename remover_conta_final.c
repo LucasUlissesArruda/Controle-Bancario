@@ -63,6 +63,7 @@ void RemoverContaFinal(TipoLista *L) {
 
     gotoxy(7, 19);
     printf("Conta removida com sucesso!");
+     gravar_contas(L);
     getch();
     menucontasbancarias();
 }

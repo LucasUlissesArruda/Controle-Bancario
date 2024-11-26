@@ -1,35 +1,30 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <windows.h>
-#include "Funcoes.h"
+#include "funcoes.h"
 
-void gravar_contas(TipoLista *L){
+void gravar_contas(TipoLista *L) {
     tipoApontador_conta p;
     reg_ContaBanco reg_ContaBanco;
     FILE *prt;
     char *filename = "Contas.dat";
-    char *modo_gravacao = "wb";
+    char *modo_gravacao = "wb";  // Modo de gravação binária
     prt = fopen(filename, modo_gravacao);
 
     desenhar_tela();
-    if(prt == NULL){
-        printf("Erro ao Abir O Arquivo");
+    if (prt == NULL) {
+        printf("Erro ao Abrir O Arquivo");
         exit(1);
-    }
-    else{
-        if (L->Primeiro == NULL){
-           gotoxy(07,18);
-           printf("Lista Vazia. Cadastre Novas Contas");
-           getch();
-        } else{
+    } else {
+        if (L->Primeiro == NULL) {
+            gotoxy(07, 18);
+            printf("Lista Vazia. Cadastre Novas Contas");
+            getch();
+        } else {
             p = L->Primeiro;
-            while (p !=NULL){
+            while (p != NULL) {
                 reg_ContaBanco = p->conteudo;
-                fwrite(&reg_ContaBanco,sizeof(reg_ContaBanco),1,prt);
+                fwrite(&reg_ContaBanco, sizeof(reg_ContaBanco), 1, prt);  // Grava no arquivo
                 p = p->proximo;
             }
         }
-        
     }
-
+    fclose(prt);
 }

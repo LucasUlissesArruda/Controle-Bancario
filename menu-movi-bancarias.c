@@ -7,6 +7,7 @@ Data: 15/11/2024
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include "funcoes.h"
 
 void menumovibancarias(){
     int opc;
@@ -27,6 +28,11 @@ void menumovibancarias(){
     gotoxy(2, 23);
     printf("Escolha uma opcao:");
     scanf("%d", &opc);
+
+    if (opc == 1) {
+    movimentacaoDebitoCredito(&lista);
+    }
+
 
     if(opc == 4){
         telaprincipal();
