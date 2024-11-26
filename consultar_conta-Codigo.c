@@ -18,14 +18,14 @@ void consultarContaCodigo(TipoLista *L) {
         return;
     }
     
-    gotoxy(7, 23);
+    gotoxy(7, 7);
     printf("Digite o Codigo da conta que deseja consultar: ");
     scanf("%d", &numeroBusca);
 
     atual = L->Primeiro;
     while (atual != NULL) {
         if (atual->conteudo.codigo == numeroBusca) {
-            gotoxy(7, 7);
+            gotoxy(9, 7);
             printf("\nConta encontrada:\n");
             gotoxy(7, 10);
             printf("Codigo: %d\n", atual->conteudo.codigo);
@@ -53,15 +53,15 @@ void consultarContaCodigo(TipoLista *L) {
         gotoxy(7, 23);
         printf("\nConta com numero %d nao encontrada.\n", numeroBusca);
         getch();
-        MenuConsultarContas(); // Volta para o menu se não encontrar
+        MenuConsultarContas(); 
     } else {
         gotoxy(7, 23);
         printf("Deseja fazer uma nova consulta? 1-Sim 2-Nao: ");
         scanf("%d", &opc);
         if (opc == 1) {
-            consultarContaCodigo(L); // Refaz a consulta com a mesma lista
+            consultarContaCodigo(L); 
         } else {
-            MenuConsultarContas(); // Volta ao menu
+            MenuConsultarContas(); 
         }
     }
 }

@@ -60,7 +60,6 @@
     "funcoes.h": "c",
     "windows.h": "c",
     "stdio.h": "c",
-    "stdlib.h": "c"
     "stdlib.h": "c",
     "string.h": "c"
   }

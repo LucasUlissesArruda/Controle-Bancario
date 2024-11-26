@@ -1,21 +1,22 @@
-#include "Funcoes.h"
+/*
+Autor: Lucas Ulisses - Leonardo Henrique 
+RA: Aluno 1: 179114-2024
+    Aluno 2: 153939-2023
+Data: 15/11/2024
+*/
+#include "funcoes.h"
+#include <stdio.h>
 
-// Declaração da lista global
 TipoLista lista;
 
-// Função principal
 int main() {
-    // Inicialização da lista (não é mais necessário inicializar aqui, pois ela é global)
+    restaurar_contas(&lista);
+    
     lista.Primeiro = NULL;
     lista.Ultimo = NULL;
 
-    // Restaura as contas bancárias do arquivo
-    restaurar_contas(&lista);
-
-    // Desenha a interface inicial
     desenhar_tela();
     telaprincipal();
     getch();
 
-    return 0;
 }
