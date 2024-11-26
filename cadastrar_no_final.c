@@ -84,7 +84,7 @@ void CadastrarContaFinal(TipoLista *L) {
         L->Ultimo = p;
     }
 
-    gotoxy(7, 19);
+    gotoxy(7, 23);
     printf("Conta cadastrada no final com sucesso!\n");
     getch(); // Pausa para o usuário ver a mensagem
 

@@ -23,35 +23,35 @@ void consultaGeralContas(TipoLista *L) {
     // Exibe as contas uma por vez
     while (atual != NULL) {
         // Exibe os dados da conta
-        gotoxy(7, 5);
+        gotoxy(7, 7);
         printf("Conta %d:", contador);
 
-        gotoxy(7, 6);
+        gotoxy(7, 8);
         printf("Codigo: %d", atual->conteudo.codigo);
 
-        gotoxy(7, 7);
+        gotoxy(7, 9);
         printf("Banco: %s", atual->conteudo.Banco);
 
-        gotoxy(7, 8);
+        gotoxy(7, 10);
         printf("Agencia: %d", atual->conteudo.agencia);
 
-        gotoxy(7, 9);
+        gotoxy(7, 11);
         printf("Numero da Conta: %d", atual->conteudo.numConta);
 
-        gotoxy(7, 10);
+        gotoxy(7, 12);
         printf("Tipo da Conta: %s", atual->conteudo.tipo_conta);
 
-        gotoxy(7, 11);
+        gotoxy(7, 13);
         printf("Saldo: %.2f", atual->conteudo.saldo);
 
-        gotoxy(7, 12);
+        gotoxy(7, 14);
         printf("Limite: %.2f", atual->conteudo.Limite);
 
-        gotoxy(7, 13);
+        gotoxy(7, 15);
         printf("Status da Conta: %s\n", (atual->conteudo.statusConta == 1 ? "Ativa" : "Inativa"));
 
         // Aguardar o usuário pressionar uma tecla para ver a próxima conta
-        gotoxy(7, 15);
+        gotoxy(7, 23);
         printf("Pressione qualquer tecla para ver a próxima conta...");
         getch(); // Espera o usuário pressionar uma tecla
         

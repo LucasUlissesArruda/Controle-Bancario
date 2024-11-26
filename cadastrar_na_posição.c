@@ -74,7 +74,7 @@ void CadastrarContaPosicao(TipoLista *L) {
     // Cria o novo nó
     novo = (tipoApontador)malloc(sizeof(TipoItem));
     if (novo == NULL) {
-        gotoxy(7, 21);
+        gotoxy(7, 23);
         printf("Erro de memória ao cadastrar conta!");
         getch();
         return;
@@ -90,7 +90,7 @@ void CadastrarContaPosicao(TipoLista *L) {
         if (L->Ultimo == NULL) {
             L->Ultimo = novo;
         }
-        gotoxy(7, 21);
+        gotoxy(7, 23);
         printf("Conta cadastrada na posição 1 (início).\n");
     } else {
         // Inserção em posição intermediária ou no final
@@ -108,7 +108,7 @@ void CadastrarContaPosicao(TipoLista *L) {
                 anterior->proximo = novo;
             }
             L->Ultimo = novo;
-            gotoxy(7, 21);
+            gotoxy(7, 23);
             printf("Posicao %d é a última. Deseja cadastrar aqui? (1-Sim, 0-Nao): ", contador);
             int confirmacao;
             scanf("%d", &confirmacao);
@@ -127,9 +127,9 @@ void CadastrarContaPosicao(TipoLista *L) {
             }
         }
 
-        gotoxy(7, 22);
+        gotoxy(7, 23);
         printf("                                            ");
-        gotoxy(7, 22);
+        gotoxy(7, 23);
         printf("Conta cadastrada na posição %d.\n", posicao);
     }
 
