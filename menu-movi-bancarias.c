@@ -33,6 +33,13 @@ void menumovibancarias(){
     movimentacaoDebitoCredito(&lista);
     }
 
+    if(opc == 2){
+        TransferirEntreContas(&lista);
+    }
+
+    if(opc == 3){
+    }
+
 
     if(opc == 4){
         telaprincipal();

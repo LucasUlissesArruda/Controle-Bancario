@@ -52,6 +52,14 @@ typedef struct {
     tipoApontador_conta Ultimo;
 } TipoLista_conta;
 
+typedef struct {
+    char data[11];
+    char favorecido[50];
+    char tipoMov[10]; // Débito ou Crédito
+    float valor;
+    float saldo;
+} Movimentacao;
+
 // Compartilhar a lista global entre os arquivos
 extern TipoLista lista;
 extern TipoLista_conta lista_contas;
@@ -112,5 +120,8 @@ void desenhar_movimentacao();
 
 // Movimentação de Debito e Credito
 void movimentacaoDebitoCredito(TipoLista *L);
+
+// Transereir Entre contas Bancarias
+void TransferirEntreContas(TipoLista *L);
 
 #endif
