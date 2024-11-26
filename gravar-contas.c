@@ -5,7 +5,7 @@ void gravar_contas(TipoLista *L) {
     reg_ContaBanco reg_ContaBanco;
     FILE *prt;
     char *filename = "Contas.dat";
-    char *modo_gravacao = "wb";  // Modo de gravação binária
+    char *modo_gravacao = "wb";  
     prt = fopen(filename, modo_gravacao);
 
     desenhar_tela();
@@ -21,7 +21,7 @@ void gravar_contas(TipoLista *L) {
             p = L->Primeiro;
             while (p != NULL) {
                 reg_ContaBanco = p->conteudo;
-                fwrite(&reg_ContaBanco, sizeof(reg_ContaBanco), 1, prt);  // Grava no arquivo
+                fwrite(&reg_ContaBanco, sizeof(reg_ContaBanco), 1, prt);  
                 p = p->proximo;
             }
         }

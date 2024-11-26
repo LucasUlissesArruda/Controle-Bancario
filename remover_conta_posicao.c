@@ -16,7 +16,7 @@ void RemoverContaPosicao(TipoLista *L) {
     }
 
     gotoxy(7, 7);
-    printf("Digite a posição da conta a ser removida: ");
+    printf("Digite a posicao da conta a ser removida: ");
     scanf("%d", &posicao);
 
     atual = L->Primeiro;
@@ -30,7 +30,7 @@ void RemoverContaPosicao(TipoLista *L) {
 
     if (atual == NULL || posicao < 1) {
         gotoxy(7, 9);
-        printf("Posição inválida!");
+        printf("Posição invalida!");
         getch();
         return;
     }
@@ -38,13 +38,13 @@ void RemoverContaPosicao(TipoLista *L) {
     gotoxy(7, 9);
     printf("Conta encontrada:");
     gotoxy(7, 10);
-    printf("Código: %d", atual->conteudo.codigo);
+    printf("Codigo: %d", atual->conteudo.codigo);
     gotoxy(7, 11);
     printf("Banco: %s", atual->conteudo.Banco);
     gotoxy(7, 12);
-    printf("Agência: %d", atual->conteudo.agencia);
+    printf("Agencia: %d", atual->conteudo.agencia);
     gotoxy(7, 13);
-    printf("Número da Conta: %d", atual->conteudo.numConta);
+    printf("Numero da Conta: %d", atual->conteudo.numConta);
     gotoxy(7, 14);
     printf("Tipo de Conta: %s", atual->conteudo.tipo_conta);
     gotoxy(7, 15);
@@ -60,17 +60,17 @@ void RemoverContaPosicao(TipoLista *L) {
 
     if (confirmacao != 1) {
         gotoxy(7, 21);
-        printf("Operação cancelada.");
+        printf("Operacao cancelada.");
         getch();
         return;
     }
 
-    if (atual == L->Primeiro) { // Remover do início
+    if (atual == L->Primeiro) { 
         L->Primeiro = atual->proximo;
         if (atual == L->Ultimo) {
             L->Ultimo = NULL;
         }
-    } else { // Remover de outra posição
+    } else { 
         anterior->proximo = atual->proximo;
         if (atual == L->Ultimo) {
             L->Ultimo = anterior;

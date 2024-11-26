@@ -22,18 +22,17 @@ void RemoverContaInicio(TipoLista *L) {
         return;
     }
 
-    // Exibir informações da primeira conta
     temp = L->Primeiro;
     gotoxy(7, 5);
-    printf("Informações da primeira conta:\n");
+    printf("Informacoes da primeira conta:\n");
     gotoxy(7, 7);
-    printf("Código: %d", temp->conteudo.codigo);
+    printf("Codigo: %d", temp->conteudo.codigo);
     gotoxy(7, 8);
     printf("Banco: %s", temp->conteudo.Banco);
     gotoxy(7, 9);
-    printf("Agência: %d", temp->conteudo.agencia);
+    printf("Agencia: %d", temp->conteudo.agencia);
     gotoxy(7, 10);
-    printf("Número da Conta: %d", temp->conteudo.numConta);
+    printf("Numero da Conta: %d", temp->conteudo.numConta);
     gotoxy(7, 11);
     printf("Tipo de Conta: %s", temp->conteudo.tipo_conta);
     gotoxy(7, 12);
@@ -54,7 +53,6 @@ void RemoverContaInicio(TipoLista *L) {
         return;
     }
 
-    // Remoção da conta
     temp = L->Primeiro;
     if (L->Primeiro == L->Ultimo) { 
         L->Primeiro = NULL;

@@ -56,15 +56,9 @@ void menucontasbancarias() {
             RemoverContaInicio(&lista);
         }  if (opc == 6) {
             RemoverContaPosicao(&lista);
-<<<<<<< HEAD
-        } else if (opc == 7) {
-            AlterarConta(&lista); 
-        } else if (opc == 8) {
-=======
         }  if (opc == 7) {
             AlterarConta(&lista);
         }  if (opc == 8) {
->>>>>>> f34f0e9e18cdca7bc278e2a60f84b9ffc7eb73ce
             MenuConsultarContas(&lista);
         }  if (opc == 9) {
             telaprincipal();

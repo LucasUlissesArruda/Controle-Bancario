@@ -18,15 +18,15 @@ void RemoverContaFinal(TipoLista *L) {
     temp = L->Ultimo;
 
     gotoxy(7, 7);
-    printf("Última conta cadastrada:");
+    printf("Ultima conta cadastrada:");
     gotoxy(7, 8);
-    printf("Código: %d", temp->conteudo.codigo);
+    printf("Codigo: %d", temp->conteudo.codigo);
     gotoxy(7, 9);
     printf("Banco: %s", temp->conteudo.Banco);
     gotoxy(7, 10);
-    printf("Agência: %d", temp->conteudo.agencia);
+    printf("Agencia: %d", temp->conteudo.agencia);
     gotoxy(7, 11);
-    printf("Número da Conta: %d", temp->conteudo.numConta);
+    printf("Numero da Conta: %d", temp->conteudo.numConta);
     gotoxy(7, 12);
     printf("Tipo de Conta: %s", temp->conteudo.tipo_conta);
     gotoxy(7, 13);
