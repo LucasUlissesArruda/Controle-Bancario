@@ -8,6 +8,10 @@
 void movimentacaoDebitoCredito(TipoLista *L) {
     int opcao;
     int contaSelecionada;
+    char dataMovimentacao[20];
+    int codigoFavorecido;
+    float valorMovimentacao;
+
     reg_ContaBanco conta;
     tipoApontador p;
     
@@ -53,7 +57,6 @@ void movimentacaoDebitoCredito(TipoLista *L) {
 
     gotoxy(7, 14);
     printf("1-Data Movimentacao....: ");
-    char dataMovimentacao[20];
     fflush(stdin);
     fgets(dataMovimentacao, 20, stdin);
     
@@ -65,12 +68,11 @@ void movimentacaoDebitoCredito(TipoLista *L) {
     
     gotoxy(7, 17);
     printf("3-Favorecido...........: ");
-    int codigoFavorecido;
     scanf("%d", &codigoFavorecido);
 
     gotoxy(7, 18);
     printf("4-Valor Movimentacao...: ");
-    float valorMovimentacao;
+    
     scanf("%f", &valorMovimentacao);
 
     if (valorMovimentacao <= 0) {
