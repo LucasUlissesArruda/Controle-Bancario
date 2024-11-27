@@ -74,13 +74,6 @@ void CadastrarContaFinal(TipoLista *L) {
     printf("Digite o status da conta (0 - Inativa, 1 - Ativa): ");
     scanf("%d", &conta.statusConta);
 
-    // Aloca memória para o novo nó
-    p = (tipoApontador)malloc(sizeof(TipoItem));
-    if (p == NULL) {
-        printf("Erro: Memória insuficiente!\n");
-        return;
-    }
-
     // Insere os dados no novo nó
     p->conteudo = conta;
     p->proximo = NULL;
@@ -93,6 +86,7 @@ void CadastrarContaFinal(TipoLista *L) {
         L->Ultimo->proximo = p;
         L->Ultimo = p;
     }
+
 
     gotoxy(7, 23);
     printf("Conta cadastrada no final com sucesso!\n");

@@ -95,8 +95,10 @@ void CadastrarContaInicio(TipoLista *L) {
         L->Primeiro = p;         // aqui ele vira o primeiro nó
     }
 
+
+
     // amém irmão
-    gotoxy(7, 19);
+    gotoxy(7, 23);
     printf("Conta cadastrada no início com sucesso!\n");
     getch();
     gravar_contas(L);

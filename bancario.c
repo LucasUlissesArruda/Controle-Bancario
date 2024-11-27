@@ -18,6 +18,7 @@ int main() {
     // Restaura as contas do arquivo para a lista
     restaurar_contas(&lista);
 
+
     desenhar_tela();
     telaprincipal();
     getch();

@@ -139,6 +139,7 @@ void CadastrarContaPosicao(TipoLista *L) {
             }
         }
 
+
         gotoxy(7, 23);
         printf("Conta cadastrada na posição %d.\n", posicao);
     }

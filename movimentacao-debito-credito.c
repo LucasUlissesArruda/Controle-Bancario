@@ -4,6 +4,7 @@ RA: Aluno 1: 179114-2024
     Aluno 2: 153939-2023
 Data: 25/11/2024
 */
+
 #include "funcoes.h"
 
 void movimentacaoDebitoCredito(TipoLista *L) {
@@ -33,10 +34,18 @@ void movimentacaoDebitoCredito(TipoLista *L) {
     }
 
     // nao achou :(
-
     if (p == NULL) {
         gotoxy(7, 9);
-        printf("Conta nao encontrada.\n");
+        printf("Conta nao encontrada");
+        getch();
+        menumovibancarias();
+        return;
+    }
+
+    // ve se a conta ainda pode fazer a transação
+    if (conta.statusConta == 0) {
+        gotoxy(7, 23);
+        printf("Conta inativa. Transacao nao permitida");
         getch();
         menumovibancarias();
         return;
@@ -63,7 +72,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
     // verifica se da para fazer a transação
     if (conta.saldo + conta.Limite <= 0) {
         gotoxy(7, 23);
-        printf("Saldo e limite insuficientes para transacao.\n");
+        printf("Saldo e limite insuficientes para transacao");
         getch();
         menumovibancarias();
         return;
@@ -88,13 +97,12 @@ void movimentacaoDebitoCredito(TipoLista *L) {
 
     gotoxy(7, 18);
     printf("4-Valor Movimentacao...: ");
-
     scanf("%f", &valorMovimentacao);
 
     // ve se tem dinheiro na carteira
     if (valorMovimentacao <= 0) {
         gotoxy(7, 23);
-        printf("Valor de movimentacao invalido.\n");
+        printf("Valor de movimentacao invalido");
         getch();
         menumovibancarias();
         return;
@@ -111,15 +119,15 @@ void movimentacaoDebitoCredito(TipoLista *L) {
                 conta.Limite -= valorMovimentacao;
             } else {
                 gotoxy(7, 23);
-                printf("Limite insuficiente.\n");
+                printf("Limite insuficiente");
                 getch();
                 menumovibancarias();
                 return;
             }
         } else {
-            // se não estiver tendo nenhum dois dois
+            // se não estiver tendo nenhum dos dois
             gotoxy(7, 23);
-            printf("Saldo insuficiente.\n");
+            printf("Saldo insuficiente");
             gotoxy(7, 24);
             printf("Saldo atual: %.2f\n", conta.saldo);
             getch();
@@ -138,7 +146,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
         }
         if (pFavorecido == NULL) {
             gotoxy(7, 23);
-            printf("Favorecido nao encontrado.\n");
+            printf("Favorecido nao encontrado");
             conta.saldo += valorMovimentacao;  // não achou volta o din
             conta.Limite += valorMovimentacao;
             getch();
@@ -149,7 +157,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
     } else if (opcao == 2) {  // Crédito
         conta.saldo -= valorMovimentacao;  // tira da conta de origem
 
-        // acha o queridao
+        // acha o favorecido
         tipoApontador pFavorecido = L->Primeiro;
         while (pFavorecido != NULL) {
             if (pFavorecido->conteudo.codigo == codigoFavorecido) {
@@ -160,7 +168,7 @@ void movimentacaoDebitoCredito(TipoLista *L) {
         }
         if (pFavorecido == NULL) {
             gotoxy(7, 23);
-            printf("Favorecido nao encontrado.\n");
+            printf("Favorecido nao encontrado");
             getch();
             menumovibancarias();
             return;
@@ -176,6 +184,6 @@ void movimentacaoDebitoCredito(TipoLista *L) {
 
     // atualiza os saldos
     p->conteudo = conta;
-    gravar_contas(L);
+    gravar_movi(L);
     menumovibancarias();
 }

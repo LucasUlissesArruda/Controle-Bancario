@@ -98,4 +98,10 @@ void AlterarConta(TipoLista *L);
 // Transereir Entre contas Bancarias
 void TransferirEntreContas(TipoLista *L);
 
+// gravar as movimentações
+void gravar_movi(TipoLista *L);
+
+// carregar as movimentacoes
+void restaurar_Movi(TipoLista *L);
+
 #endif

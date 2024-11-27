@@ -38,6 +38,15 @@ void TransferirEntreContas(TipoLista *L) {
         return;
     }
 
+    // ve se o individuo pode fazer a transação
+    if (contaOrigem ->conteudo.statusConta ==0) {
+        gotoxy(7, 19);
+        printf("Conta origem inativa. Transacao nao permitida!");
+        getch();
+        menumovibancarias();
+        return;
+    }
+
     // pede o codigo de destino
     gotoxy(50, 7);
     printf("Conta de Destino: ");
@@ -47,6 +56,14 @@ void TransferirEntreContas(TipoLista *L) {
     contaDestino = L->Primeiro;
     while (contaDestino != NULL && contaDestino->conteudo.codigo != codigoDestino) {
         contaDestino = contaDestino->proximo;
+    }
+
+     if (contaDestino ->conteudo.statusConta == 0) {
+        gotoxy(7, 19);
+        printf("Conta destino inativa. Transacao nao permitida");
+        getch();
+        menumovibancarias();
+        return;
     }
 
     // novamente se não tiver
@@ -121,6 +138,7 @@ void TransferirEntreContas(TipoLista *L) {
     // se deus quiser chega aqui
     gotoxy(7, 23);
     printf("Transferencia realizada com sucesso!");
+    gravar_movi(L);
     getch();
     menumovibancarias();
 }

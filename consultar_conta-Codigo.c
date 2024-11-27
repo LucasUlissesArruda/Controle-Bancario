@@ -30,9 +30,9 @@ void consultarContaCodigo(TipoLista *L) {
     printf("Digite o Codigo da conta que deseja consultar: "); 
     scanf("%d", &numeroBusca);  // le o codigo que você colocou
 
-    atual = L->Primeiro;  // Inicializa o ponteiro com o primeiro elemento
+    atual = L->Primeiro;  // começa a lista com o primeiro elemento
     
-    // Percorre a lista procurando o codigo
+    // corre a lista procurando seu codigo
     while (atual != NULL) {
         if (atual->conteudo.codigo == numeroBusca) {  // Verifica se o codigo existe
             gotoxy(9, 7); 
@@ -56,22 +56,22 @@ void consultarContaCodigo(TipoLista *L) {
             gotoxy(7, 17);
             printf("Status da Conta: %d\n", atual->conteudo.statusConta);
             
-            encontrado = 1;  // Atualiza a flag indicando que a conta foi encontrada.
+            encontrado = 1;  // opa, encontrou
             break; 
         }
-        atual = atual->proximo;  // Ponteiro vai para o proximo da lista
+        atual = atual->proximo;  // pula para o proximo
     }
 
-    // Se não achar o codigo ele apresenta uma mensagem
+    // se não achar da nisso dae
     if (!encontrado) {
         gotoxy(7, 23); 
-        printf("\nConta com numero %d nao encontrada.\n", numeroBusca);  // Mostra o erro
+        printf("\nConta com numero %d nao encontrada.\n", numeroBusca); 
         getch();  
         MenuConsultarContas();  
     } else {
-        // Pergunta se ele quer fazer uma nova pesquisa
+        // quer ir dnv ?
         gotoxy(7, 23);  
-        printf("Deseja fazer uma nova consulta? 1-Sim 2-Nao: "); // Pergunta se ele quer continuar
+        printf("Quer fazer uma nova consulta? 1-Sim 2-Nao: ");
         scanf("%d", &opc); 
 
         
