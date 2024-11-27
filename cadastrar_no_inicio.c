@@ -39,7 +39,7 @@ void CadastrarContaInicio(TipoLista *L) {
     scanf("%d", &conta.agencia);
 
     gotoxy(7,10);
-    printf("Digite o número da conta: ");
+    printf("Digite o numero da conta: ");
     scanf("%d", &conta.numConta);
 
     // Menu de seleção do tipo de conta
@@ -81,6 +81,14 @@ void CadastrarContaInicio(TipoLista *L) {
     gotoxy(2,23);
     printf("Digite o status da conta (0 - Inativa, 1 - Ativa): ");
     scanf("%d", &conta.statusConta);
+
+    p = (tipoApontador)malloc(sizeof(TipoItem));
+    if (p == NULL) {
+        gotoxy(7, 23);
+        printf("Erro ao alocar memoria!\n");
+        getch();
+        return;
+    }
 
     // coloca os dados em um novo nó
     p->conteudo = conta;

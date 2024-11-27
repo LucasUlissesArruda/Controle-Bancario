@@ -17,6 +17,7 @@ int main() {
 
     // Restaura as contas do arquivo para a lista
     restaurar_contas(&lista);
+    restaurar_Movi(&lista);
 
 
     desenhar_tela();

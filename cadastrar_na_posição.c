@@ -92,6 +92,14 @@ void CadastrarContaPosicao(TipoLista *L) {
         return;
     }
 
+    novo = (tipoApontador)malloc(sizeof(TipoItem));
+    if (novo == NULL) {
+        gotoxy(7, 23);
+        printf("Erro ao alocar memoria");
+        getch();
+        return;
+    }
+
     novo->conteudo = conta;
     novo->proximo = NULL;
 
