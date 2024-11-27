@@ -1,5 +1,5 @@
 /*
-Autor: Lucas Ulisses
+Autor: Lucas Ulisses - Leonardo Henrique
 RA: Aluno 1: 179114-2024
     Aluno 2: 153939-2023
 Data: 15/11/2024
@@ -78,7 +78,7 @@ void CadastrarContaFinal(TipoLista *L);
 void CadastrarContaInicio(TipoLista *L);
 
 // Cadastrar na posição
-void CadastrarContaPosicao(TipoLista *L, int posicao);
+void CadastrarContaPosicao(TipoLista *L);
 
 // Remover conta Final
 void RemoverContaFinal(TipoLista *L);

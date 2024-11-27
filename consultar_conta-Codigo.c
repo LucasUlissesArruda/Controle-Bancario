@@ -1,3 +1,9 @@
+/*
+Autor: Lucas Ulisses
+RA: Aluno 1: 179114-2024
+    Aluno 2: 153939-2023
+Data: 22/11/2024
+*/
 #include <stdio.h>
 #include "Funcoes.h"
 
@@ -6,7 +12,7 @@ void consultarContaCodigo(TipoLista *L) {
     system("cls"); 
     desenhar_tela(); 
 
-    int opc;  /==
+    int opc;
     int numeroBusca;  
     tipoApontador atual; 
     int encontrado = 0; 

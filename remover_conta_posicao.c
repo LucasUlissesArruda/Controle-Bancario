@@ -78,7 +78,7 @@ void RemoverContaPosicao(TipoLista *L) {
     }
 
     free(atual);
-     gravar_contas(L);
+    gravar_contas(L);
 
     gotoxy(7, 21);
     printf("Conta removida com sucesso!");

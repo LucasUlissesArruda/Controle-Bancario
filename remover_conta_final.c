@@ -3,21 +3,21 @@
 
 // Função para remover a última conta cadastrada na lista
 void RemoverContaFinal(TipoLista *L) {
-    tipoApontador p, temp;  // ponteiro para a lista temporario
+    tipoApontador p, temp;  
     int confirmacao;  
 
     system("cls");  
     desenhar_tela();  
 
-    // Verifica se a lista de contas está vazia
+    // ve se tem algum individo
     if (L->Primeiro == NULL) {
         gotoxy(7, 12);  
-        printf("Nenhuma conta cadastrada!");  // mostra que não tem contas
+        printf("Nenhuma conta cadastrada!");
         getch();  
         return; 
     }
 
-    temp = L->Ultimo;  // Aponta para a última conta da lista
+    temp = L->Ultimo;  // mostra o ultimo
 
     // Mostra as informações se der certo
     gotoxy(7, 7);
@@ -39,7 +39,7 @@ void RemoverContaFinal(TipoLista *L) {
     gotoxy(7, 15);
     printf("Status: %d", temp->conteudo.statusConta);
 
-    // Solicita confirmação do usuário para remover a conta
+    // bglh vai ir embora mané
     gotoxy(7, 17);
     printf("Deseja remover esta conta? (1 - Sim / 2 - Não): ");
     scanf("%d", &confirmacao);
@@ -55,12 +55,12 @@ void RemoverContaFinal(TipoLista *L) {
     // se tiver so um, ele remove apenas ele
     if (L->Primeiro == L->Ultimo) {
         free(L->Primeiro);  // fuma a memória da última conta
-        L->Primeiro = NULL;  // ele deixa a lista como NULL
-        L->Ultimo = NULL;  // ele deixa a lista como NULL
+        L->Primeiro = NULL;
+        L->Ultimo = NULL; 
     } else {
         // se tiver outro, ele vai ate o penultimo
         p = L->Primeiro;
-        while (p->proximo != L->Ultimo) {  // Vai ate  o penúltimo elemento
+        while (p->proximo != L->Ultimo) {  // Vai ate o penúltimo elemento
             p = p->proximo;  // Move o ponteiro para o próximo
         }
         free(L->Ultimo);  // Fuma a memória da última conta

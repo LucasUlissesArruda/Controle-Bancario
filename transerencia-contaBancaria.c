@@ -1,3 +1,9 @@
+/*
+Autor: Lucas Ulisses
+RA: Aluno 1: 179114-2024
+    Aluno 2: 153939-2023
+Data: 25/11/2024
+*/
 #include "funcoes.h"
 void TransferirEntreContas(TipoLista *L) {
     system("cls");
@@ -6,22 +12,24 @@ void TransferirEntreContas(TipoLista *L) {
     int codigoOrigem, codigoDestino;
     float valorTransferencia;
     tipoApontador contaOrigem = NULL, contaDestino = NULL;
+    Movimentacao movi;
 
-    // Cabeçalho
+    // enfeite
     gotoxy(2, 5);
     printf("----------- CONTA ORIGEM -----------+----------- CONTA DESTINO --------------");
 
-    // Solicitar código da conta de origem
+    // pede o codigo de origem
     gotoxy(7, 7);
     printf("Conta de Origem: ");
     scanf("%d", &codigoOrigem);
 
-    // Buscar conta de origem
+    // acha o codigo de origem
     contaOrigem = L->Primeiro;
     while (contaOrigem != NULL && contaOrigem->conteudo.codigo != codigoOrigem) {
         contaOrigem = contaOrigem->proximo;
     }
 
+    // se nao achar tem isso aqui
     if (contaOrigem == NULL) {
         gotoxy(7, 8);
         printf("Conta de origem nao encontrada!");
@@ -30,17 +38,18 @@ void TransferirEntreContas(TipoLista *L) {
         return;
     }
 
-    // Solicitar código da conta de destino
+    // pede o codigo de destino
     gotoxy(50, 7);
     printf("Conta de Destino: ");
     scanf("%d", &codigoDestino);
 
-    // Buscar conta de destino
+    // procura o codigo
     contaDestino = L->Primeiro;
     while (contaDestino != NULL && contaDestino->conteudo.codigo != codigoDestino) {
         contaDestino = contaDestino->proximo;
     }
 
+    // novamente se não tiver
     if (contaDestino == NULL) {
         gotoxy(50, 8);
         printf("Conta de destino nao encontrada!");
@@ -49,7 +58,7 @@ void TransferirEntreContas(TipoLista *L) {
         return;
     }
 
-    // Exibir informações lado a lado
+    // mostra lado a lado(deu trabalho)
     gotoxy(7, 10);
     printf("Banco..........: %s", contaOrigem->conteudo.Banco);
     gotoxy(50, 10);
@@ -80,12 +89,12 @@ void TransferirEntreContas(TipoLista *L) {
     gotoxy(50, 15);
     printf("Limite.........: %.2f", contaDestino->conteudo.Limite);
 
-    // Solicitar valor da transferência
+    // pede o valor
     gotoxy(7, 18);
     printf("Valor a ser transferido: ");
     scanf("%f", &valorTransferencia);
 
-    // Validar transferência
+    // ve se tem dinheiro suficiente na conta
     if (contaOrigem->conteudo.saldo + contaOrigem->conteudo.Limite < valorTransferencia) {
         gotoxy(7, 19);
         printf("Saldo insuficiente na conta de origem!");
@@ -94,22 +103,22 @@ void TransferirEntreContas(TipoLista *L) {
         return;
     }
 
-    // Realizar transferência
+    // faz a transferencia
     contaOrigem->conteudo.saldo -= valorTransferencia;
     contaDestino->conteudo.saldo += valorTransferencia;
 
-    // Exibir novos saldos
+    // mostra os novos saldos (bglh foi chato)
     gotoxy(7, 17);
     printf("Novo Saldo.....: %.2f", contaOrigem->conteudo.saldo);
     gotoxy(50, 17);
     printf("Novo Saldo.....: %.2f", contaDestino->conteudo.saldo);
 
-    // Solicitar data da transferência
-    char dataTransferencia[11];
+    //pede a data
     gotoxy(7, 20);
     printf("Data da Transferencia (dd/mm/aaaa): ");
-    scanf("%s", dataTransferencia);
+    scanf("%c", movi.data);
 
+    // se deus quiser chega aqui
     gotoxy(7, 23);
     printf("Transferencia realizada com sucesso!");
     getch();

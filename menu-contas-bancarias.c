@@ -49,7 +49,7 @@ void menucontasbancarias() {
         }  if (opc == 2) {
             CadastrarContaInicio(&lista);
         }  if (opc == 3) {
-            
+            CadastrarContaPosicao(&lista);
         }  if (opc == 4) {
             RemoverContaFinal(&lista);
         }  if (opc == 5) {
