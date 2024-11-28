@@ -1,3 +1,9 @@
+/*
+Autor: Leonardo Henrique
+RA: Aluno 1: 179114-2024 Lucas Ulisses
+    Aluno 2: 153939-2023
+Data: 25/11/2024
+*/
 #include "funcoes.h"
 
 void CadastrarContaFinal(TipoLista *L) {
@@ -36,13 +42,13 @@ void CadastrarContaFinal(TipoLista *L) {
 
     // Menu de seleção do tipo de conta
     gotoxy(7,11);
-    printf("Escolha o tipo de conta:\n");
+    printf("Escolha o tipo de conta:");
     gotoxy(7,12);
-    printf("1 - Conta Corrente\n");
+    printf("1 - Conta Corrente");
     gotoxy(7,13);
-    printf("2 - Conta Poupanca\n");
+    printf("2 - Conta Poupanca");
     gotoxy(7,14);
-    printf("3 - Cartao de Credito\n");
+    printf("3 - Cartao de Credito");
 
     gotoxy(7,15);
     printf("Escolha a opcao: ");
@@ -95,9 +101,11 @@ void CadastrarContaFinal(TipoLista *L) {
         L->Ultimo = p;
     }
 
+    gotoxy(02,23);
+    printf("                                                             ");
 
     gotoxy(7, 23);
-    printf("Conta cadastrada no final com sucesso!\n");
+    printf("Conta cadastrada no final com sucesso!");
     getch(); // Pausa para o usuário ver a mensagem
 
     gravar_contas(L); // Grava os dados da lista no arquivo

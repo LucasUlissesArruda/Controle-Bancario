@@ -21,6 +21,7 @@ typedef struct {
     float saldo;
     float Limite;
     int statusConta;
+    char ultimaDataMovimentacao[11];
 } reg_ContaBanco;
 
 typedef struct TipoItem *tipoApontador;
@@ -103,5 +104,11 @@ void gravar_movi(TipoLista *L);
 
 // carregar as movimentacoes
 void restaurar_Movi(TipoLista *L);
+
+// validar data
+int validaData(char *data);
+
+// menu de remover
+void MenuRemover();
 
 #endif

@@ -44,13 +44,13 @@ void CadastrarContaInicio(TipoLista *L) {
 
     // Menu de seleção do tipo de conta
     gotoxy(7,11);
-    printf("Escolha o tipo de conta:\n");
+    printf("Escolha o tipo de conta:");
     gotoxy(7,12);
-    printf("1 - Conta Corrente\n");
+    printf("1 - Conta Corrente");
     gotoxy(7,13);
-    printf("2 - Conta Poupanca\n");
+    printf("2 - Conta Poupanca");
     gotoxy(7,14);
-    printf("3 - Cartao de Credito\n");
+    printf("3 - Cartao de Credito");
 
     gotoxy(7,15);
     printf("Escolha a opcao: ");
@@ -65,7 +65,7 @@ void CadastrarContaInicio(TipoLista *L) {
         strcpy(conta.tipo_conta, "Cartao de Credito");
     } else { // escolhe direito
         gotoxy(7, 16);
-        printf("Opcao invalida! Tipo de conta nao cadastrado.\n");
+        printf("Opcao invalida! Tipo de conta nao cadastrado.");
         getch();
         return;
     }
@@ -85,7 +85,7 @@ void CadastrarContaInicio(TipoLista *L) {
     p = (tipoApontador)malloc(sizeof(TipoItem));
     if (p == NULL) {
         gotoxy(7, 23);
-        printf("Erro ao alocar memoria!\n");
+        printf("Erro ao alocar memoria!");
         getch();
         return;
     }
@@ -104,10 +104,12 @@ void CadastrarContaInicio(TipoLista *L) {
     }
 
 
+    gotoxy(02,23);
+    printf("                                                             ");
 
     // amém irmão
     gotoxy(7, 23);
-    printf("Conta cadastrada no início com sucesso!\n");
+    printf("Conta cadastrada no início com sucesso!");
     getch();
     gravar_contas(L);
     menucontasbancarias(); 

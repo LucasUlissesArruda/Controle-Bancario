@@ -21,22 +21,16 @@ void menucontasbancarias() {
         printf("3- Cadastrar Contas Bancarias na Posicao");
 
         gotoxy(20, 13);
-        printf("4- Remover Contas Bancarias no Final");
+        printf("4- Remover Contas Bancarias");
 
         gotoxy(20, 14);
-        printf("5- Remover Contas Bancarias no Inicio");
+        printf("5- Alteracao Contas Bancarias");
 
         gotoxy(20, 15);
-        printf("6- Remover Contas Bancarias na Posicao");
+        printf("6- Consultar Contas Bancarias");
 
         gotoxy(20, 16);
-        printf("7- Alteracao Contas Bancarias");
-
-        gotoxy(20, 17);
-        printf("8- Consultar Contas Bancarias");
-
-        gotoxy(20, 18);
-        printf("9- Retornar ao menu anterior");
+        printf("7- Retornar ao menu anterior");
 
         gotoxy(2, 23);
         printf("Escolha uma opcao: ");
@@ -51,18 +45,13 @@ void menucontasbancarias() {
         }  if (opc == 3) {
             CadastrarContaPosicao(&lista);
         }  if (opc == 4) {
-            RemoverContaFinal(&lista);
+            MenuRemover();
         }  if (opc == 5) {
-            RemoverContaInicio(&lista);
-        }  if (opc == 6) {
-            RemoverContaPosicao(&lista);
-        }  if (opc == 7) {
             AlterarConta(&lista);
-        }  if (opc == 8) {
+        }  if (opc == 6) {
             MenuConsultarContas(&lista);
-        }  if (opc == 9) {
+        }  if (opc == 7) {
             telaprincipal();
-        }
-    
-    }
+        } 
+}
 

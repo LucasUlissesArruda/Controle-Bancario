@@ -1,18 +1,7 @@
-/*
-Autor: Lucas Ulisses - Leonardo Henrique 
-RA: Aluno 1: 179114-2024
-    Aluno 2: 153939-2023
-Data: 15/11/2024
-*/
-
-
-#include <stdlib.h>
-#include <stdio.h>
 #include "funcoes.h"
-
-void desenhar_tela() {
+void desenhar_remover() {
     system("cls");
-    mudar_cor(0x09);
+    mudar_cor(0x5);
     int lin;
 
     for (lin = 1; lin < 25; lin++) {
@@ -38,7 +27,7 @@ void desenhar_tela() {
     gotoxy(25, 2);
     printf("Sistema de Controle Bancario");
     gotoxy(30,3);
-    printf("Menu Principal");
+    printf("Menu Remoção");
     gotoxy(60, 3);
     printf("Lucas e Leonardo");
 }

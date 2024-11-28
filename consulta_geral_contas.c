@@ -15,14 +15,14 @@ void consultaGeralContas(TipoLista *L) {
 
     if (L->Primeiro == NULL) {
         gotoxy(7, 23);
-        printf("Nenhuma conta cadastrada!\n");
+        printf("Nenhuma conta cadastrada!");
         getch();
         menucontasbancarias();
         return;
     }
 
     gotoxy(7, 3);
-    printf("LISTAGEM GERAL DE CONTAS BANCARIAS:\n");
+    printf("LISTAGEM GERAL DE CONTAS BANCARIAS:");
 
     int contador = 1; // Contador para exibir a posição das contas
 
@@ -54,11 +54,11 @@ void consultaGeralContas(TipoLista *L) {
         printf("Limite: %.2f", atual->conteudo.Limite);
 
         gotoxy(7, 15);
-        printf("Status da Conta: %d\n", atual->conteudo.statusConta);
+        printf("Status da Conta: %d", atual->conteudo.statusConta);
 
 
         gotoxy(7, 23);
-        printf("Pressione qualquer tecla para ver a próxima conta...");
+        printf("Pressione qualquer tecla para ver a proxima conta...");
         getch();
         
 

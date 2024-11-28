@@ -36,25 +36,25 @@ void consultarContaCodigo(TipoLista *L) {
     while (atual != NULL) {
         if (atual->conteudo.codigo == numeroBusca) {  // Verifica se o codigo existe
             gotoxy(9, 7); 
-            printf("\nConta encontrada:\n"); 
+            printf("Conta encontrada:"); 
             
             // Mostra as informações
             gotoxy(7, 10);
-            printf("Codigo: %d\n", atual->conteudo.codigo);
+            printf("Codigo: %d", atual->conteudo.codigo);
             gotoxy(7, 11);
-            printf("Banco: %s\n", atual->conteudo.Banco);
+            printf("Banco: %s", atual->conteudo.Banco);
             gotoxy(7, 12);
-            printf("Agencia: %d\n", atual->conteudo.agencia);
+            printf("Agencia: %d", atual->conteudo.agencia);
             gotoxy(7, 13);
-            printf("Numero da Conta: %d\n", atual->conteudo.numConta);
+            printf("Numero da Conta: %d", atual->conteudo.numConta);
             gotoxy(7, 14);
-            printf("Tipo da Conta: %s\n", atual->conteudo.tipo_conta);
+            printf("Tipo da Conta: %s", atual->conteudo.tipo_conta);
             gotoxy(7, 15);
-            printf("Saldo: %.2f\n", atual->conteudo.saldo);
+            printf("Saldo: %.2f", atual->conteudo.saldo);
             gotoxy(7, 16);
-            printf("Limite: %.2f\n", atual->conteudo.Limite);
+            printf("Limite: %.2f", atual->conteudo.Limite);
             gotoxy(7, 17);
-            printf("Status da Conta: %d\n", atual->conteudo.statusConta);
+            printf("Status da Conta: %d", atual->conteudo.statusConta);
             
             encontrado = 1;  // opa, encontrou
             break; 
@@ -65,7 +65,7 @@ void consultarContaCodigo(TipoLista *L) {
     // se não achar da nisso dae
     if (!encontrado) {
         gotoxy(7, 23); 
-        printf("\nConta com numero %d nao encontrada.\n", numeroBusca); 
+        printf("\nConta com numero %d nao encontrada.", numeroBusca); 
         getch();  
         MenuConsultarContas();  
     } else {

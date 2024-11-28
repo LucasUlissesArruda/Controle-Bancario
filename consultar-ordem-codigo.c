@@ -10,7 +10,7 @@ void ConsultarOrdemCodigoContas(TipoLista *L) {
     // ve se tem contas na lista
     if (L->Primeiro == NULL) {
         gotoxy(7, 7);  
-        printf("Nao existem contas cadastradas.\n");
+        printf("Nao existem contas cadastradas.");
         getch();  
         return;  
     }
@@ -34,24 +34,24 @@ void ConsultarOrdemCodigoContas(TipoLista *L) {
         desenhar_tela(); 
 
         gotoxy(7, 7);
-        printf("Codigo: %d\n", p->conteudo.codigo);  
+        printf("Codigo: %d", p->conteudo.codigo);  
         gotoxy(7, 8);
-        printf("Banco: %s\n", p->conteudo.Banco);  
+        printf("Banco: %s", p->conteudo.Banco);  
         gotoxy(7, 9);
-        printf("Agencia: %d\n", p->conteudo.agencia);  
+        printf("Agencia: %d", p->conteudo.agencia);  
         gotoxy(7, 10);
-        printf("Numero da Conta: %d\n", p->conteudo.numConta); 
+        printf("Numero da Conta: %d", p->conteudo.numConta); 
         gotoxy(7, 11);
-        printf("Tipo da Conta: %s\n", p->conteudo.tipo_conta);  
+        printf("Tipo da Conta: %s", p->conteudo.tipo_conta);  
         gotoxy(7, 12);
-        printf("Saldo: %.2f\n", p->conteudo.saldo);  
+        printf("Saldo: %.2f", p->conteudo.saldo);  
         gotoxy(7, 13);
-        printf("Limite: %.2f\n", p->conteudo.Limite); 
+        printf("Limite: %.2f", p->conteudo.Limite); 
         gotoxy(7, 14);
-        printf("Status da Conta: %d\n", p->conteudo.statusConta); 
+        printf("Status da Conta: %d", p->conteudo.statusConta); 
 
         gotoxy(7, 23);
-        printf("Pressione qualquer tecla para ver a proxima conta...\n"); 
+        printf("Pressione qualquer tecla para ver a proxima conta..."); 
         getch(); 
 
         p = p->proximo;  // vai para a proxima da lista

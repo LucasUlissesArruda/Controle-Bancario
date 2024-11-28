@@ -18,7 +18,7 @@ void RemoverContaInicio(TipoLista *L) {
     // ve se tem conta cadastrada
     if (L->Primeiro == NULL) {
         gotoxy(7, 23); 
-        printf("Nenhuma Conta cadastrada!\n");
+        printf("Nenhuma Conta cadastrada!");
         getch();  
         menucontasbancarias(); 
         return;
@@ -29,7 +29,7 @@ void RemoverContaInicio(TipoLista *L) {
 
     // mostra oq ela tem
     gotoxy(7, 5); 
-    printf("Informacoes da primeira conta:\n");
+    printf("Informacoes da primeira conta:");
     gotoxy(7, 7);
     printf("Codigo: %d", temp->conteudo.codigo);
     gotoxy(7, 8);
@@ -55,8 +55,9 @@ void RemoverContaInicio(TipoLista *L) {
     // se nao for = 1 nao vai
     if (confirmacao != 1) {
         gotoxy(7, 18);
-        printf("Operação cancelada.\n");
+        printf("Operação cancelada.");
         getch();
+        menucontasbancarias();
         return;
     }
 
@@ -75,7 +76,7 @@ void RemoverContaInicio(TipoLista *L) {
     free(temp);  // fumega ele
     gravar_contas(L); 
     gotoxy(7, 18); 
-    printf("Conta removida com sucesso!\n"); 
+    printf("Conta removida com sucesso!"); 
     getch(); 
-    menucontasbancarias(); 
+    MenuRemover(); 
 }

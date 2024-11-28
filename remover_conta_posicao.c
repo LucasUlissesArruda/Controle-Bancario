@@ -12,6 +12,7 @@ void RemoverContaPosicao(TipoLista *L) {
         gotoxy(7, 12);
         printf("Nenhuma conta cadastrada!");
         getch();
+        menucontasbancarias();
         return;
     }
 
@@ -32,6 +33,7 @@ void RemoverContaPosicao(TipoLista *L) {
         gotoxy(7, 9);
         printf("Posição invalida!");
         getch();
+        menucontasbancarias();
         return;
     }
 
@@ -62,6 +64,7 @@ void RemoverContaPosicao(TipoLista *L) {
         gotoxy(7, 21);
         printf("Operacao cancelada.");
         getch();
+        menucontasbancarias();
         return;
     }
 
@@ -83,5 +86,5 @@ void RemoverContaPosicao(TipoLista *L) {
     gotoxy(7, 21);
     printf("Conta removida com sucesso!");
     getch();
-    menucontasbancarias();
+    MenuRemover(); 
 }

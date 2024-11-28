@@ -14,6 +14,7 @@ void RemoverContaFinal(TipoLista *L) {
         gotoxy(7, 12);  
         printf("Nenhuma conta cadastrada!");
         getch();  
+        menucontasbancarias();
         return; 
     }
 
@@ -49,6 +50,7 @@ void RemoverContaFinal(TipoLista *L) {
         gotoxy(7, 19);
         printf("Operacao cancelada.");  
         getch();  
+        menucontasbancarias();
         return;  
     }
 
@@ -74,5 +76,5 @@ void RemoverContaFinal(TipoLista *L) {
     
     gravar_contas(L);  // Grava a lista atualizada no arquivo
     getch();  
-    menucontasbancarias(); 
+    MenuRemover(); 
 }
