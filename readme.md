@@ -4,7 +4,7 @@ Projeto acadêmico desenvolvido na **faculdade UniCV** para a disciplina de **Es
 
 ## Descrição  
 Este sistema bancário foi implementado em C, com funcionalidades como:  
-- Cadastro de contas (corrente, crédito ou outros tipos);  
+- Cadastro de contas (corrente, crédito);  
 - Consulta de contas cadastradas;  
 - Alteração de dados das contas;  
 - Remoção de contas.  
@@ -17,4 +17,9 @@ Demonstrar habilidades práticas em programação estruturada e trabalhar com op
 ## Tecnologias Utilizadas  
 - Linguagem C  
 - Conceitos de Estrutura de Dados  
+
+## Participantes
+
+- Lucas Arruda
+- Leonardo Camacho
 
